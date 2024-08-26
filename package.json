@@ -2,11 +2,11 @@
   "name": "email-service",
   "version": "1.0.0",
   "description": "A resilient email sending service in JavaScript",
-  "main": "src/EmailService.js",
+  "main": "dist/EmailService.js",
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "start": "node src/EmailService.js"
+    "start": "node dist/EmailService.js"
   },
   "dependencies": {
     "@types/jest": "^29.5.12",
