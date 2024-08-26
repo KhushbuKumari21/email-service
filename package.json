@@ -2,7 +2,7 @@
   "name": "email-service",
   "version": "1.0.0",
   "description": "A resilient email sending service in JavaScript",
-  "main": "dist/EmailService.js",
+  "main": "src/EmailService.js",
   "scripts": {
     "build": "tsc",
     "test": "jest",
