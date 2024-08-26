@@ -5,7 +5,8 @@
   "main": "dist/EmailService.js",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "start": "node src/EmailService.js"
   },
   "dependencies": {
     "@types/jest": "^29.5.12",
