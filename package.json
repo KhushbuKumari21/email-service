@@ -4,8 +4,10 @@
   "description": "A resilient email sending service in JavaScript",
   "main": "dist/EmailService.js",
   "scripts": {
-    "build": "tsc",
-    "test": "jest"
+    "build": "tsc",                        
+    "check": "tsc --noEmit",              
+    "start": "node dist/EmailService.js",
+    "test": "jest"                        
   },
   "dependencies": {
     "@types/jest": "^29.5.12",
