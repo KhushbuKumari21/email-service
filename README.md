@@ -15,7 +15,8 @@ A resilient email sending service implemented in JavaScript. This service includ
 # 1.#  Clone the repository:
 
    ```bash
-   git clone https://github.com/KhushbuKumari21/EmailService.git
+   git clone https://github.com/KhushbuKumari21/email-service
+   
 #  2.Navigate to the project directory:
 
 cd EmailService
@@ -24,25 +25,20 @@ cd EmailService
 
 npm install
 
-
-**Usage**
-Import the EmailService and MockEmailProvider classes into your project.
-
-Create instances of MockEmailProvider with desired failure rates and initialize EmailService with these providers.
-
-Use the sendEmail method to send emails and handle responses.
 const EmailService = require('./src/EmailService');
 const MockEmailProvider = require('./src/MockEmailProvider');
 
-const failingProvider = new MockEmailProvider(1.0);
-const fallbackProvider = new MockEmailProvider(0.1);
+// Create instances of providers with desired failure rates
+const failingProvider = new MockEmailProvider(1.0); // Provider that always fails
+const fallbackProvider = new MockEmailProvider(0.1); // Provider with 10% failure rate
 
+// Initialize EmailService with primary and fallback providers
 const emailService = new EmailService([failingProvider, fallbackProvider], 1000);
 
+// Send an email and handle the result
 emailService.sendEmail('test@example.com')
   .then(() => console.log('Email sent successfully'))
   .catch(err => console.error('Failed to send email:', err));
-
 
 **Testing**
 npm test
